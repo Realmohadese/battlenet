@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+--breakpoint-mobile : 340px ;
+--breakpoint-desktop : 1024px ;
+--breakpoint-star : 1100px ;
+--breakpoint-search : 1400px ;
+}
+@font-face {
+    font-family: noto;
+    src: url(/fonts/NotoSans-Regular.ttf);
+}
+@font-face {
+    font-family: notoBold;
+    src: url(/fonts/NotoSans-Bold.ttf);
+}
+@font-face {
+    font-family: DMsans;
+    src: url(/fonts/DM-Sans-regular.woff2);
+}
+@font-face {
+    font-family: objectsans;
+    src: url(/fonts/ObjectSans-Bold.woff);
+}
