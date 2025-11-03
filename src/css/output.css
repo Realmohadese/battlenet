@@ -3394,19 +3394,19 @@
 }
 @font-face {
   font-family: noto;
-  src: url(/batllenet/fonts/NotoSans-Regular.ttf);
+  src: url(/battlenet/fonts/NotoSans-Regular.ttf);
 }
 @font-face {
   font-family: notoBold;
-  src: url(/batllenet/fonts/NotoSans-Bold.ttf);
+  src: url(/battlenet/fonts/NotoSans-Bold.ttf);
 }
 @font-face {
   font-family: DMsans;
-  src: url(/batllenet/fonts/DM-Sans-regular.woff2);
+  src: url(/battlenet/fonts/DM-Sans-regular.woff2);
 }
 @font-face {
   font-family: objectsans;
-  src: url(/batllenet/fonts/ObjectSans-Bold.woff);
+  src: url(/battlenet/fonts/ObjectSans-Bold.woff);
 }
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light] {
