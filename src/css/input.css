@@ -7,8 +7,10 @@
 --breakpoint-mobile : 340px ;
 --breakpoint-desktop : 1024px ;
 --breakpoint-star : 1100px ;
---breakpoint-del : 1300px ;
+--breakpoint-star1 : 1200px ;
+--breakpoint-del : 1350px ;
 --breakpoint-search : 1400px ;
+--breakpoint-search1 : 1450px ;
 }
 @font-face {
     font-family: noto;
