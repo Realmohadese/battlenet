@@ -1300,6 +1300,9 @@
     --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
     isolation: isolate;
   }
+  .z-0 {
+    z-index: 0;
+  }
   .z-1 {
     z-index: 1;
   }
@@ -1308,9 +1311,6 @@
   }
   .z-5 {
     z-index: 5;
-  }
-  .z-10 {
-    z-index: 10;
   }
   .z-20 {
     z-index: 20;
@@ -1334,6 +1334,9 @@
     }
     @media (width >= 1100px) {
       max-width: 1100px;
+    }
+    @media (width >= 1300px) {
+      max-width: 1300px;
     }
     @media (width >= 1400px) {
       max-width: 1400px;
@@ -1777,9 +1780,6 @@
   .h-\[680px\] {
     height: 680px;
   }
-  .h-\[1400px\] {
-    height: 1400px;
-  }
   .h-fit {
     height: fit-content;
   }
@@ -1842,9 +1842,6 @@
   }
   .w-\[30px\] {
     width: 30px;
-  }
-  .w-\[31\%\] {
-    width: 31%;
   }
   .w-\[35\%\] {
     width: 35%;
@@ -1936,20 +1933,20 @@
   .w-full {
     width: 100%;
   }
-  .max-w-\[720px\] {
-    max-width: 720px;
-  }
-  .max-w-\[800px\] {
-    max-width: 800px;
-  }
   .max-w-\[1000px\] {
     max-width: 1000px;
+  }
+  .max-w-\[1024px\] {
+    max-width: 1024px;
   }
   .max-w-\[1500px\] {
     max-width: 1500px;
   }
   .max-w-\[2500px\] {
     max-width: 2500px;
+  }
+  .max-w-\[7000px\] {
+    max-width: 7000px;
   }
   .-translate-x-full {
     --tw-translate-x: -100%;
@@ -2058,9 +2055,6 @@
   }
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
-  }
-  .gap-x-7 {
-    column-gap: calc(var(--spacing) * 7);
   }
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
@@ -2192,6 +2186,9 @@
   .bg-\[\#107C10\] {
     background-color: #107C10;
   }
+  .bg-\[\#191b23\] {
+    background-color: #191b23;
+  }
   .bg-\[\#373D52\] {
     background-color: #373D52;
   }
@@ -2225,6 +2222,12 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-black\/70 {
+    background-color: color-mix(in srgb, #000 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
+    }
+  }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
   }
@@ -2252,6 +2255,12 @@
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[url\(\/battlenet\/images\/about\/img-1\.png\)\] {
+    background-image: url(/battlenet/images/about/img-1.png);
+  }
+  .bg-\[url\(\/battlenet\/images\/about\/img-2\.png\)\] {
+    background-image: url(/battlenet/images/about/img-2.png);
   }
   .bg-\[url\(\/battlenet\/images\/cards\/cards1\/img-1\.png\)\] {
     background-image: url(/battlenet/images/cards/cards1/img-1.png);
@@ -2336,12 +2345,6 @@
   }
   .bg-\[url\(\/battlenet\/images\/cards\/cards4\/img-7\.png\)\] {
     background-image: url(/battlenet/images/cards/cards4/img-7.png);
-  }
-  .bg-\[url\(\/images\/about\/img-1\.png\)\] {
-    background-image: url(/images/about/img-1.png);
-  }
-  .bg-\[url\(\/images\/about\/img-2\.png\)\] {
-    background-image: url(/images/about/img-2.png);
   }
   .from-black\/70 {
     --tw-gradient-from: color-mix(in srgb, #000 70%, transparent);
@@ -2496,9 +2499,6 @@
   .text-\[18px\] {
     font-size: 18px;
   }
-  .text-\[19px\] {
-    font-size: 19px;
-  }
   .text-\[20px\] {
     font-size: 20px;
   }
@@ -2510,12 +2510,6 @@
   }
   .text-\[35px\] {
     font-size: 35px;
-  }
-  .text-\[50px\] {
-    font-size: 50px;
-  }
-  .text-\[60px\] {
-    font-size: 60px;
   }
   .text-\[80\%\] {
     font-size: 80%;
@@ -2978,14 +2972,34 @@
       display: inline-block;
     }
   }
+  .mobile\:h-\[10\%\] {
+    @media (width >= 340px) {
+      height: 10%;
+    }
+  }
+  .mobile\:h-\[20\%\] {
+    @media (width >= 340px) {
+      height: 20%;
+    }
+  }
   .mobile\:h-\[50\%\] {
     @media (width >= 340px) {
       height: 50%;
     }
   }
+  .mobile\:h-\[90\%\] {
+    @media (width >= 340px) {
+      height: 90%;
+    }
+  }
   .mobile\:h-\[440px\] {
     @media (width >= 340px) {
       height: 440px;
+    }
+  }
+  .mobile\:h-\[3000px\] {
+    @media (width >= 340px) {
+      height: 3000px;
     }
   }
   .mobile\:w-\[6\%\] {
@@ -2998,9 +3012,19 @@
       width: 7%;
     }
   }
+  .mobile\:w-\[90\%\] {
+    @media (width >= 340px) {
+      width: 90%;
+    }
+  }
   .mobile\:w-\[92\%\] {
     @media (width >= 340px) {
       width: 92%;
+    }
+  }
+  .mobile\:w-\[98\%\] {
+    @media (width >= 340px) {
+      width: 98%;
     }
   }
   .mobile\:w-\[100\%\] {
@@ -3011,6 +3035,16 @@
   .mobile\:w-full {
     @media (width >= 340px) {
       width: 100%;
+    }
+  }
+  .mobile\:flex-col {
+    @media (width >= 340px) {
+      flex-direction: column;
+    }
+  }
+  .mobile\:gap-y-10 {
+    @media (width >= 340px) {
+      row-gap: calc(var(--spacing) * 10);
     }
   }
   .mobile\:bg-cover {
@@ -3033,9 +3067,29 @@
       font-size: 15px;
     }
   }
+  .mobile\:text-\[16px\] {
+    @media (width >= 340px) {
+      font-size: 16px;
+    }
+  }
+  .mobile\:text-\[18px\] {
+    @media (width >= 340px) {
+      font-size: 18px;
+    }
+  }
   .mobile\:text-\[20px\] {
     @media (width >= 340px) {
       font-size: 20px;
+    }
+  }
+  .mobile\:text-\[30px\] {
+    @media (width >= 340px) {
+      font-size: 30px;
+    }
+  }
+  .mobile\:text-\[40px\] {
+    @media (width >= 340px) {
+      font-size: 40px;
     }
   }
   .mobile\:text-\[90\%\] {
@@ -3058,9 +3112,9 @@
       display: inline;
     }
   }
-  .desktop\:inline-block {
+  .desktop\:h-\[20\%\] {
     @media (width >= 1024px) {
-      display: inline-block;
+      height: 20%;
     }
   }
   .desktop\:h-\[40\%\] {
@@ -3068,14 +3122,29 @@
       height: 40%;
     }
   }
+  .desktop\:h-\[50\%\] {
+    @media (width >= 1024px) {
+      height: 50%;
+    }
+  }
   .desktop\:h-\[60\%\] {
     @media (width >= 1024px) {
       height: 60%;
     }
   }
+  .desktop\:h-\[80\%\] {
+    @media (width >= 1024px) {
+      height: 80%;
+    }
+  }
   .desktop\:h-\[400px\] {
     @media (width >= 1024px) {
       height: 400px;
+    }
+  }
+  .desktop\:h-\[1400px\] {
+    @media (width >= 1024px) {
+      height: 1400px;
     }
   }
   .desktop\:w-\[9\%\] {
@@ -3103,6 +3172,11 @@
       width: 27%;
     }
   }
+  .desktop\:w-\[31\%\] {
+    @media (width >= 1024px) {
+      width: 31%;
+    }
+  }
   .desktop\:w-\[78\%\] {
     @media (width >= 1024px) {
       width: 78%;
@@ -3116,6 +3190,21 @@
   .desktop\:w-\[100\%\] {
     @media (width >= 1024px) {
       width: 100%;
+    }
+  }
+  .desktop\:w-full {
+    @media (width >= 1024px) {
+      width: 100%;
+    }
+  }
+  .desktop\:max-w-\[720px\] {
+    @media (width >= 1024px) {
+      max-width: 720px;
+    }
+  }
+  .desktop\:max-w-\[800px\] {
+    @media (width >= 1024px) {
+      max-width: 800px;
     }
   }
   .desktop\:max-w-\[1500px\] {
@@ -3133,6 +3222,16 @@
       max-width: 7000px;
     }
   }
+  .desktop\:flex-row {
+    @media (width >= 1024px) {
+      flex-direction: row;
+    }
+  }
+  .desktop\:flex-wrap {
+    @media (width >= 1024px) {
+      flex-wrap: wrap;
+    }
+  }
   .desktop\:items-center {
     @media (width >= 1024px) {
       align-items: center;
@@ -3141,6 +3240,11 @@
   .desktop\:justify-center {
     @media (width >= 1024px) {
       justify-content: center;
+    }
+  }
+  .desktop\:gap-x-7 {
+    @media (width >= 1024px) {
+      column-gap: calc(var(--spacing) * 7);
     }
   }
   .desktop\:text-\[15px\] {
@@ -3153,9 +3257,29 @@
       font-size: 17px;
     }
   }
+  .desktop\:text-\[19px\] {
+    @media (width >= 1024px) {
+      font-size: 19px;
+    }
+  }
+  .desktop\:text-\[20px\] {
+    @media (width >= 1024px) {
+      font-size: 20px;
+    }
+  }
   .desktop\:text-\[35px\] {
     @media (width >= 1024px) {
       font-size: 35px;
+    }
+  }
+  .desktop\:text-\[50px\] {
+    @media (width >= 1024px) {
+      font-size: 50px;
+    }
+  }
+  .desktop\:text-\[60px\] {
+    @media (width >= 1024px) {
+      font-size: 60px;
     }
   }
   .desktop\:text-\[70\%\] {
@@ -3186,6 +3310,11 @@
   .search\:ml-3 {
     @media (width >= 1400px) {
       margin-left: calc(var(--spacing) * 3);
+    }
+  }
+  .search\:flex {
+    @media (width >= 1400px) {
+      display: flex;
     }
   }
   .search\:inline {
@@ -3265,19 +3394,19 @@
 }
 @font-face {
   font-family: noto;
-  src: url(/battlenet/fonts/NotoSans-Regular.ttf);
+  src: url(/batllenet/fonts/NotoSans-Regular.ttf);
 }
 @font-face {
   font-family: notoBold;
-  src: url(/battlenet/fonts/NotoSans-Bold.ttf);
+  src: url(/batllenet/fonts/NotoSans-Bold.ttf);
 }
 @font-face {
   font-family: DMsans;
-  src: url(/battlenet/fonts/DM-Sans-regular.woff2);
+  src: url(/batllenet/fonts/DM-Sans-regular.woff2);
 }
 @font-face {
   font-family: objectsans;
-  src: url(/battlenet/fonts/ObjectSans-Bold.woff);
+  src: url(/batllenet/fonts/ObjectSans-Bold.woff);
 }
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light] {

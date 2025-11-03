@@ -7,21 +7,22 @@
 --breakpoint-mobile : 340px ;
 --breakpoint-desktop : 1024px ;
 --breakpoint-star : 1100px ;
+--breakpoint-del : 1300px ;
 --breakpoint-search : 1400px ;
 }
 @font-face {
     font-family: noto;
-    src: url(/battlenet/fonts/NotoSans-Regular.ttf);
+    src: url(/batllenet/fonts/NotoSans-Regular.ttf);
 }
 @font-face {
     font-family: notoBold;
-    src: url(/battlenet/fonts/NotoSans-Bold.ttf);
+    src: url(/batllenet/fonts/NotoSans-Bold.ttf);
 }
 @font-face {
     font-family: DMsans;
-    src: url(/battlenet/fonts/DM-Sans-regular.woff2);
+    src: url(/batllenet/fonts/DM-Sans-regular.woff2);
 }
 @font-face {
     font-family: objectsans;
-    src: url(/battlenet/fonts/ObjectSans-Bold.woff);
+    src: url(/batllenet/fonts/ObjectSans-Bold.woff);
 }
